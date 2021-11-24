@@ -3,27 +3,14 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview
-        id="1"
-        thumbnail="assets/images/tech.jpeg"
-        title="Hello there!"
-        previewText="This is my first post"
-      />
-      <PostPreview
-        id="2"
-        thumbnail="assets/images/tech.jpeg"
-        title="Hello there - the second time!"
-        previewText="This is my second post"
-      />
-    </section>
+    <PostList />
   </div>
 </template>
 
 <script>
-import PostPreview from "../components/posts/PostPreview";
+import PostList from "../components/posts/PostList";
 export default {
-  components: {PostPreview}
+  components: {PostList}
 }
 </script>
 
