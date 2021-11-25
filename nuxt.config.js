@@ -25,10 +25,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'assets/styles/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    'plugins/core-components.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,5 +50,10 @@ export default {
 
   env: {
     baseUrl: process.env.BASE_URL || 'https://nuxt-project-43cd9-default-rtdb.europe-west1.firebasedatabase.app'
+  },
+
+  transition: {
+    name: 'fade',
+    mode: 'out-in'
   }
 }
