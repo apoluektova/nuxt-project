@@ -11,10 +11,9 @@ import axios from "axios";
 import AdminPostForm from "../../../components/Admin/AdminPostForm";
 
 export default {
-  layout: 'admin',
   components: {AdminPostForm},
   asyncData(context) {
-    return axios.get('https://nuxt-project-43cd9-default-rtdb.europe-west1.firebasedatabase.app/posts/' + context.params.postId + '.json')
+    return axios.get(process.env.baseUrl + '/posts/' + context.params.postId + '.json')
     .then(response => {
       return {
         loadedPost: { ...response.data, id: context.params.postId }
