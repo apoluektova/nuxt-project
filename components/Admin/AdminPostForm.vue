@@ -1,8 +1,8 @@
 <template>
   <form @submit.prevent="onSave">
-    <AppControlInput v-model="editedPost.author">Author Name</AppControlInput>
-    <AppControlInput v-model="editedPost.title">Title</AppControlInput>
-    <AppControlInput v-model="editedPost.thumbnail">Thumbnail Link</AppControlInput>
+    <AppControlInput v-model="editedPost.author" input-id="authorName">Author Name</AppControlInput>
+    <AppControlInput v-model="editedPost.title" input-id="title">Title</AppControlInput>
+    <AppControlInput v-model="editedPost.thumbnail" input-id="link">Thumbnail Link</AppControlInput>
     <AppControlInput
       control-type="textarea"
       v-model="editedPost.content">Content</AppControlInput>

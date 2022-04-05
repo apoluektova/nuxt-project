@@ -1,10 +1,12 @@
 <template>
   <div class="input-control">
-    <label><slot /></label>
+    <label :for="inputId" ><slot /></label>
     <input
       v-if="controlType === 'input'"
+      :id="inputId"
       v-bind="$attrs"
       :value="value"
+      name="formInput"
       @input="$emit('input', $event.target.value)">
     <textarea
       v-if="controlType === 'textarea'"
@@ -23,6 +25,10 @@ export default {
       default: 'input'
     },
     value: {
+      type: String,
+      default: ''
+    },
+    inputId: {
       type: String,
       default: ''
     }
